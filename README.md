@@ -27,3 +27,13 @@ r.teach;
 p560.plot(qz);
 T=transl(0.6,0.1,0)*rpy2tr(0,180,0,'deg');
 q=p560.ikine6s(T);
+
+
+%for motion
+syms th1 th2 th3 th4 th5;
+r.fkine([th1 th2 th3 th4 th5]);
+for th1=0:.1:pi/2
+   r.plot([th1 0 0 0 0]);
+   pause(.25)
+end
+ 
